@@ -1,17 +1,18 @@
+
 /* =====================================
    1. COLORS AND GENERAL STYLES
 ===================================== */
 
 :root {
-    --background: #52607e;
-    --surface: #131E30;
-    --surface-light: #1C2A40;
-    --navy: #F4F1E8;
-    --gold: #E0B34F;
-    --gold-light: #F0C96E;
-    --text: #C0C8D5;
-    --white: #FFFFFF;
-    --border: #2B3A50;
+    --background: #FFFFFF;
+    --surface: #E8F4F8;
+    --surface-light: #D6EAF0;
+    --navy: #173B57;
+    --gold: #39A6A3;
+    --gold-light: #5CC4BE;
+    --text: #496779;
+    --white: #173B57;
+    --border: #C5DFE8;
 }
 
 * {
@@ -65,7 +66,7 @@ button, a {
 }
 
 .logo {
-    color: var(--white);
+    color: var(--navy);
     font-size: 29px;
     font-weight: 700;
     letter-spacing: -1.2px;
@@ -149,7 +150,7 @@ button, a {
 }
 
 .hero h1 {
-    color: var(--white);
+    color: var(--navy);
     font-family: 'Poppins', sans-serif;
     font-size: clamp(40px, 4.2vw, 64px);
     font-weight: 800;
@@ -179,7 +180,7 @@ button, a {
 
     padding: 14px 26px;
     background: var(--gold);
-    color: var(--background);
+    color: #FFFFFF;
 
     border-radius: 8px;
     font-size: 15px;
@@ -190,6 +191,7 @@ button, a {
 
 .btn:hover {
     background: var(--gold-light);
+    color: var(--navy);
     transform: translateY(-3px);
 }
 
@@ -222,7 +224,7 @@ button, a {
     align-items: center;
     justify-content: center;
 
-    background: var(--surface-light);
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 10px;
     font-size: 21px;
@@ -250,5 +252,14 @@ button, a {
     width: 100%;
     max-width: 520px;
     height: auto;
+    object-fit: contain;
+}
+
+/* DOWNLOADED ICONS */
+
+.icon,
+.feature-icon img {
+    width: 20px;
+    height: 20px;
     object-fit: contain;
 }
