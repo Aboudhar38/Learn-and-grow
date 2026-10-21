@@ -1,13 +1,5 @@
-
 /* =====================================
-   1. GOOGLE FONTS
-===================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
-
-
-/* =====================================
-   2. COLORS AND GENERAL STYLES
+   1. COLORS AND GENERAL STYLES
 ===================================== */
 
 :root {
@@ -57,7 +49,7 @@ button, a {
 
 
 /* =====================================
-   3. NAVIGATION BAR
+   2. NAVIGATION BAR
 ===================================== */
 
 .header {
@@ -124,30 +116,32 @@ button, a {
 
 
 /* =====================================
-   4. HERO SECTION
+   3. HERO SECTION
 ===================================== */
 
 .hero {
     width: 90%;
     max-width: 1320px;
     min-height: 650px;
-    margin: auto;
-    padding: 55px 0 65px;
+    margin: 0 auto;
+    padding: 60px 0;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
-    gap: 40px;
+    gap: 50px;
 }
+
+/* LEFT SIDE: TEXT CONTENT */
 
 .hero-content {
     position: relative;
     z-index: 2;
+    width: 100%;
 }
 
-.welcome,
-.section-label {
-    margin-bottom: 15px;
+.welcome {
+    margin-bottom: 18px;
     color: var(--gold);
     font-size: 12px;
     font-weight: 700;
@@ -157,9 +151,9 @@ button, a {
 .hero h1 {
     color: var(--white);
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(40px, 4.5vw, 66px);
+    font-size: clamp(40px, 4.2vw, 64px);
     font-weight: 800;
-    line-height: 1.18;
+    line-height: 1.2;
     letter-spacing: -2px;
 }
 
@@ -168,62 +162,48 @@ button, a {
 }
 
 .description {
-    max-width: 530px;
-    margin: 25px 0;
+    max-width: 500px;
+    margin: 24px 0;
     color: var(--text);
     font-size: 16px;
     line-height: 1.9;
 }
 
-
-/* =====================================
-   5. START LEARNING BUTTON
-===================================== */
+/* START LEARNING BUTTON */
 
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 14px;
+    gap: 12px;
 
-    min-height: 54px;
-    padding: 13px 24px;
-
+    padding: 14px 26px;
     background: var(--gold);
-    color: #151B27;
-    border: 1px solid var(--gold);
-    border-radius: 9px;
+    color: var(--background);
 
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    border-radius: 8px;
+    font-size: 15px;
     font-weight: 700;
 
-    box-shadow: 0 8px 25px rgba(224, 179, 79, 0.12);
-    transition: background 0.25s ease,
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
+    transition: 0.3s ease;
 }
 
 .btn:hover {
     background: var(--gold-light);
-    border-color: var(--gold-light);
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(224, 179, 79, 0.2);
 }
 
 .btn span {
-    font-size: 21px;
+    font-size: 20px;
 }
 
-
-/* =====================================
-   6. LEARNING BENEFITS
-===================================== */
+/* LEARNING BENEFITS */
 
 .features {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 28px;
     margin-top: 42px;
 }
 
@@ -233,689 +213,42 @@ button, a {
     gap: 10px;
 }
 
-.feature p {
-    color: #E6EAF0;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.6;
-}
-
 .feature-icon {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     flex-shrink: 0;
 
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     background: var(--surface-light);
-    border: 1px solid #35435A;
-    border-radius: 50%;
+    border: 1px solid var(--border);
+    border-radius: 10px;
     font-size: 21px;
 }
 
-
-/* =====================================
-   7. ILLUSTRATION BACKGROUND
-===================================== */
-
-.hero-illustration {
-    position: relative;
-    width: 100%;
-    min-height: 450px;
-    isolation: isolate;
-}
-
-.illustration-background {
-    position: absolute;
-    z-index: -2;
-    inset: 8% 4% 12% 4%;
-
-    background: linear-gradient(135deg, #1D2D45, #263752);
-    border: 1px solid #35465F;
-    border-radius: 45% 48% 35% 40%;
-    transform: rotate(-4deg);
-}
-
-
-/* =====================================
-   8. STUDENT ILLUSTRATION
-===================================== */
-
-.student {
-    position: absolute;
-    inset: 0;
-}
-
-.body {
-    position: absolute;
-    right: 12%;
-    bottom: 13%;
-    width: 62%;
-    height: 48%;
-
-    background: linear-gradient(120deg, #1D4F87, #102F56);
-    border-radius: 45% 40% 5% 5%;
-
-    clip-path: polygon(
-        18% 0, 36% 8%, 50% 20%,
-        66% 5%, 83% 18%, 100% 100%, 0 100%
-    );
-}
-
-.body::before {
-    content: "";
-    position: absolute;
-    top: -2%;
-    left: 24%;
-    width: 48%;
-    height: 35%;
-
-    border: 15px solid #245687;
-    border-bottom: 0;
-    border-radius: 50% 50% 0 0;
-}
-
-.string {
-    position: absolute;
-    top: 30%;
-    width: 3px;
-    height: 35%;
-    background: #6687AD;
-    border-radius: 5px;
-}
-
-.string-left {
-    left: 43%;
-}
-
-.string-right {
-    left: 53%;
-}
-
-/* Hair */
-
-.hair {
-    position: absolute;
-    top: 8%;
-    left: 43%;
-    z-index: 3;
-    width: 27%;
-    height: 18%;
-
-    background: #101827;
-    border-radius: 48% 48% 25% 25%;
-
-    box-shadow:
-        -7px 8px 0 -2px #101827,
-        5px -4px 0 1px #101827,
-        13px 4px 0 -1px #101827;
-
-    transform: rotate(5deg);
-}
-
-/* Face */
-
-.face {
-    position: absolute;
-    top: 12%;
-    left: 43%;
-    z-index: 2;
-    width: 25%;
-    height: 33%;
-
-    background: #BD7655;
-    border-radius: 42% 45% 46% 44%;
-    transform: rotate(7deg);
-}
-
-.eye {
-    position: absolute;
-    top: 39%;
-    width: 8%;
-    height: 7%;
-    background: #102A4E;
-    border-radius: 50%;
-}
-
-.eye-left {
-    left: 27%;
-}
-
-.eye-right {
-    right: 23%;
-}
-
-.nose {
-    position: absolute;
-    top: 45%;
-    left: 54%;
-    width: 13%;
-    height: 18%;
-
-    border-right: 2px solid #824832;
-    border-bottom: 2px solid #824832;
-    border-radius: 0 0 10px 0;
-}
-
-.smile {
-    position: absolute;
-    right: 21%;
-    bottom: 19%;
-    width: 34%;
-    height: 12%;
-
-    border-bottom: 3px solid #542C2B;
-    border-radius: 0 0 50% 50%;
-    transform: rotate(-7deg);
-}
-
-.neck {
-    position: absolute;
-    top: 37%;
-    left: 50%;
-    width: 14%;
-    height: 17%;
-
-    background: #A85E43;
-    border-radius: 0 0 15px 15px;
-    transform: rotate(8deg);
-}
-
-.arm {
-    position: absolute;
-    right: 22%;
-    bottom: 16%;
-    z-index: 4;
-    width: 36%;
-    height: 10%;
-
-    background: #B96F50;
-    border-radius: 30px;
-    transform: rotate(-8deg);
-}
-
-
-/* =====================================
-   9. LAPTOP
-===================================== */
-
-.laptop {
-    position: absolute;
-    right: 17%;
-    bottom: 12%;
-    z-index: 5;
-    width: 43%;
-    height: 34%;
-    transform: skew(-10deg);
-}
-
-.laptop-screen {
-    position: absolute;
-    inset: 0 0 4%;
-
-    display: grid;
-    place-items: center;
-
-    background: linear-gradient(135deg, #F7F8FA, #C8D0DC);
-    border: 5px solid #AEB9CA;
-    border-radius: 9px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
-
-.laptop-screen span {
-    width: 18px;
-    height: 18px;
-    background: #FFFFFF;
-    border-radius: 50%;
-}
-
-.laptop-base {
-    position: absolute;
-    right: -7%;
-    bottom: -5%;
-    left: -9%;
-    height: 8%;
-
-    background: #8796AB;
-    border-radius: 0 0 8px 8px;
-}
-
-
-/* =====================================
-   10. BOOKS
-===================================== */
-
-.books {
-    position: absolute;
-    bottom: 13%;
-    left: 2%;
-    z-index: 6;
-    width: 32%;
-    height: 11%;
-    transform: rotate(2deg);
-}
-
-.book {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 35%;
-    border: 2px solid #52647B;
-    border-radius: 7px 12px 12px 7px;
-}
-
-.book-one {
-    top: 0;
-    background: #D6A43D;
-}
-
-.book-two {
-    top: 31%;
-    background: #1E6B66;
-}
-
-.book-three {
-    top: 62%;
-    background: #D9DFEB;
-}
-
-
-/* =====================================
-   11. LIGHTBULB AND PLANT
-===================================== */
-
-.lightbulb {
-    position: absolute;
-    top: 17%;
-    right: 20%;
-    z-index: -1;
-    font-size: 55px;
-}
-
-.plant {
-    position: absolute;
-    right: 1%;
-    bottom: 14%;
-    z-index: 3;
-    width: 75px;
-    height: 125px;
-}
-
-.leaf {
-    position: absolute;
-    bottom: 35%;
-    left: 43%;
-    width: 28px;
-    height: 49px;
-
-    background: #3B9B7B;
-    border-radius: 100% 0 100% 0;
-    transform-origin: bottom center;
-}
-
-.leaf-one {
-    left: 14%;
-    transform: rotate(-43deg);
-}
-
-.leaf-two {
-    bottom: 47%;
-    transform: rotate(22deg);
-}
-
-.leaf-three {
-    left: 56%;
-    bottom: 30%;
-    transform: rotate(48deg);
-}
-
-.pot {
-    position: absolute;
-    right: 7px;
-    bottom: 0;
-    left: 7px;
-    height: 34px;
-
-    background: #E6E9EF;
-    border-radius: 3px 3px 16px 16px;
-    box-shadow: inset 0 4px 0 #C4CEDB;
-}
-
-.desk {
-    position: absolute;
-    right: 0;
-    bottom: 7%;
-    left: 1%;
-    z-index: -1;
-    height: 23px;
-
-    background: #26354A;
-    border: 1px solid #35455C;
-    border-radius: 50%;
-    transform: rotate(-1deg);
-}
-
-
-/* =====================================
-   12. COURSES SECTION
-===================================== */
-
-.courses {
-    padding: 75px 5%;
-    text-align: center;
-
-    background: #0E1828;
-    border-top: 1px solid #202E43;
-}
-
-.courses h2 {
-    margin-bottom: 10px;
-    color: var(--white);
-
-    font-family: 'Poppins', sans-serif;
-    font-size: clamp(28px, 3vw, 40px);
-    font-weight: 700;
-    letter-spacing: -0.8px;
-    line-height: 1.3;
-}
-
-.section-description {
-    max-width: 620px;
-    margin: 0 auto 35px;
-    color: var(--text);
-    font-size: 15px;
-    line-height: 1.8;
-}
-
-.course-container {
-    max-width: 1050px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
-
-    text-align: left;
-}
-
-.course-card {
-    padding: 25px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-
-    transition: transform 0.3s ease,
-                border-color 0.3s ease,
-                box-shadow 0.3s ease;
-}
-
-.course-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--gold);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
-}
-
-.course-icon {
-    width: 45px;
-    height: 45px;
-
-    display: grid;
-    place-items: center;
-
-    background: #2B2B2A;
-    color: var(--gold);
-    border: 1px solid #51452D;
-    border-radius: 12px;
-    font-size: 25px;
-}
-
-.course-card h3 {
-    margin: 15px 0 7px;
-    color: var(--white);
-
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+.feature p {
+    color: var(--navy);
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.5;
 }
 
-.course-card p {
-    color: var(--text);
-    font-size: 14px;
-    line-height: 1.8;
+/* RIGHT SIDE: STUDENT IMAGE */
+
+.hero-illustration {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-
-/* =====================================
-   13. FOOTER
-===================================== */
-
-.footer {
-    padding: 25px 15px;
-    background: #080E19;
-    border-top: 1px solid #202B3D;
-
-    color: #AEB8C8;
-    text-align: center;
-    font-size: 13px;
-}
-
-
-/* =====================================
-   14. TABLET RESPONSIVENESS
-===================================== */
-
-@media (max-width: 980px) {
-
-    .header,
-    .hero {
-        width: 92%;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        padding-top: 40px;
-    }
-
-    .hero-content {
-        max-width: 720px;
-    }
-
-    .hero-illustration {
-        width: min(600px, 100%);
-        min-height: 390px;
-        margin: auto;
-    }
-
-    .features {
-        margin-top: 35px;
-    }
-
-    .course-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-
-/* =====================================
-   15. MOBILE RESPONSIVENESS
-===================================== */
-
-@media (max-width: 600px) {
-
-    .header {
-        width: 92%;
-        padding: 18px 0 8px;
-
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .logo {
-        font-size: 26px;
-    }
-
-    .navbar {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 10px;
-    }
-
-    .navbar a {
-        font-size: 13px;
-    }
-
-    .hero {
-        width: 92%;
-        padding: 35px 0 45px;
-        gap: 20px;
-    }
-
-    .welcome,
-    .section-label {
-        font-size: 11px;
-        letter-spacing: 2px;
-    }
-
-    .hero h1 {
-        font-size: clamp(34px, 9.5vw, 50px);
-        line-height: 1.2;
-        letter-spacing: -1.3px;
-    }
-
-    .description {
-        margin: 18px 0 24px;
-        font-size: 15px;
-        line-height: 1.8;
-    }
-
-    .btn {
-        min-height: 49px;
-        padding: 12px 18px;
-        font-size: 13px;
-    }
-
-    .features {
-        margin-top: 28px;
-        gap: 15px;
-    }
-
-    .feature {
-        gap: 7px;
-    }
-
-    .feature p {
-        font-size: 10px;
-    }
-
-    .feature-icon {
-        width: 38px;
-        height: 38px;
-        font-size: 17px;
-    }
-
-    .hero-illustration {
-        min-height: 300px;
-        margin-top: 5px;
-    }
-
-    .lightbulb {
-        font-size: 36px;
-    }
-
-    .plant {
-        transform: scale(0.75);
-        transform-origin: bottom right;
-    }
-
-    .courses {
-        padding: 50px 5%;
-    }
-
-    .courses h2 {
-        font-size: 27px;
-        letter-spacing: -0.5px;
-    }
-
-    .section-description {
-        font-size: 14px;
-    }
-
-    .course-container {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .course-card {
-        padding: 22px;
-    }
-
-    .course-card h3 {
-        font-size: 17px;
-    }
-}
-
-
-/* =====================================
-   16. VERY SMALL PHONES
-===================================== */
-
-@media (max-width: 360px) {
-
-    .navbar {
-        justify-content: flex-start;
-        gap: 12px;
-    }
-
-    .navbar a {
-        font-size: 12px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero-illustration {
-        min-height: 255px;
-    }
-
-    .features {
-        gap: 10px;
-    }
-
-    .feature-icon {
-        width: 34px;
-        height: 34px;
-    }
-}
-
-
-/* =====================================
-   17. ACCESSIBILITY
-===================================== */
-
-a:focus-visible {
-    outline: 3px solid var(--gold-light);
-    outline-offset: 4px;
-    border-radius: 3px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-    html {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-    }
+.hero-illustration img {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    object-fit: contain;
 }
